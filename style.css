@@ -1,0 +1,361 @@
+.portfolio-section {
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Added padding for better spacing */
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  width: 100%;
+  max-width: 1482px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center header content horizontally */
+  color: #fff;
+  justify-content: space-between;
+  z-index: 1000%;
+  width:100%;
+  max-width: 1767px;
+  position: sticky;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  font-family: JejuMyeongjo, sans-serif;
+  font-size: 18px ;
+}
+
+a{
+  text-decoration: none;
+  color:#fff;
+}
+
+a:hover{
+  color: beige;
+}
+
+.nav-menu:hover {
+  color: beige;
+}
+
+.nav-menu::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: beige;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s;
+}
+
+.nav-menu:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.profile-image {
+  aspect-ratio: 1;
+  object-fit: cover; /* Ensure the image covers the container */
+  width: 150px; /* Default width for larger screens */
+  border-radius: 50%;
+  max-width: 100%;
+  margin: 20px auto; /* Center image horizontally */
+}
+
+/* Responsive Styles for Profile Image */
+@media (max-width: 991px) {
+  .profile-image {
+    width: 120px; /* Adjust width for smaller screens */
+    margin: 20px auto; /* Center image horizontally */
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-image {
+    width: 100px; /* Adjust width for very small screens */
+    margin: 15px auto; /* Center image horizontally */
+  }
+}
+
+.greeting {
+  margin-top: 25px;
+  font: 700 40px Istok Web, sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+.about-section {
+  display: flex;
+  margin-top: 5px;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1px 0 68px;
+}
+
+.bio {
+  color: #fff;
+  align-self: stretch;
+  font: 18px JejuMyeongjo, sans-serif;
+}
+
+.social-links {
+  width: 250px;
+  max-width: 100%;
+  margin: 80px 0 0 10px;
+}
+
+.social-icons {
+  gap: 20px;
+  display: flex;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 33%;
+  margin-right: 20px;
+}
+
+.icon-wrapper:hover .social-icon {
+  opacity: 0.6;
+}
+
+.social-icon {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 55px;
+  fill: lightgray;
+  stroke-width: 1px;
+  stroke: #fff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  max-width: 100%;
+  flex-grow: 1;
+  border: 1px solid rgba(255, 255, 255, 1);
+  transition: opacity 0.3s;
+}
+
+.section-title {
+  color: #fff;
+  margin: 100px 0 0 35px;
+  font: 700 32px Istok Web, sans-serif;
+}
+
+.skills-section {
+  display: flex;
+  margin-top: 70px;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1px 0 61px;
+}
+
+.skills-description {
+  color: #fff;
+  align-self: stretch;
+  font: 22px JejuMyeongjo, sans-serif;
+  margin-top: 70px;
+}
+
+.technologies-title {
+  color: #fff;
+  margin: 70px 0 0 21px;
+  font: 700 32px Istok Web, sans-serif;
+}
+
+.tech-icons {
+  display: flex;
+  width: 600px;
+  max-width: 100%;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 49px 0 0 31px;
+}
+
+.tech-icon {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 88px;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.projects-title {
+  color: #fff;
+  margin: 150px 0 0 31px;
+  font: 700 32px Istok Web, sans-serif;
+}
+
+.project-container {
+  margin-top: 20px;
+}
+
+.project-content {
+  gap: 20px;
+  display: flex;
+}
+
+.project-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 28%;
+  margin-left: 70px;
+}
+
+.project-image {
+  aspect-ratio: 1.09;
+  object-fit: auto;
+  object-position: center;
+  width: 150px;
+  flex-grow: 1;
+}
+
+.project-description-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 72%;
+  margin-left: 0px;
+}
+
+.project-description {
+  color: #fff;
+  align-self: stretch;
+  margin: auto;
+  font: 20px JejuMyeongjo, sans-serif;
+}
+
+.project-title {
+  color: #fff;
+  align-self: flex-start;
+  margin: 15px 1100px 10px 10px;
+  font: 300 25px JejuMyeongjo, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .portfolio-section {
+    padding: 0 20px;
+  }
+
+  .content-wrapper {
+    max-width: 100%;
+  }
+
+  .nav-menu {
+    white-space: initial;
+  }
+
+  .profile-image {
+    width: 120px; /* Adjust width for smaller screens */
+    margin: 20px auto; /* Center image horizontally */
+  }
+
+  .greeting {
+    max-width: 100%;
+    margin-top: 40px;
+    font-size: 30px; /* Adjust font-size for smaller screens */
+  }
+
+  .about-section {
+    max-width: 100%;
+    padding-left: 20px;
+  }
+
+  .bio {
+    max-width: 100%;
+  }
+
+  .social-links {
+    margin-top: 40px;
+  }
+
+  .social-icons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .icon-wrapper {
+    width: 100%;
+  }
+
+  .social-icon {
+    margin-top: 40px;
+  }
+
+  .section-title {
+    margin-top: 40px;
+  }
+
+  .skills-section {
+    max-width: 100%;
+    padding-left: 20px;
+    margin-top: 40px;
+  }
+
+  .skills-description {
+    max-width: 100%;
+  }
+
+  .technologies-title {
+    max-width: 100%;
+    margin-top: 40px;
+    font-size: 30px; /* Adjust font-size for smaller screens */
+  }
+
+  .tech-icons {
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .projects-title {
+    margin-top: 40px;
+  }
+
+  .project-container {
+    max-width: 100%;
+  }
+
+  .project-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .project-image-wrapper {
+    width: 100%;
+  }
+
+  .project-image {
+    margin-top: 33px;
+  }
+
+  .project-description-wrapper {
+    width: 100%;
+  }
+
+  .project-description {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .project-title {
+    margin: 40px 0 0 10px;
+  }
+}
