@@ -3,13 +3,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px; /* Added padding for better spacing */
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 0px 0px 100px;
+  /* Added padding for better spacing */
+}
+
+html {
+  background-color: #171717;
 }
 
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  align-items: center;
+  /* Center content horizontally */
   width: 100%;
   max-width: 1482px;
   margin: 0 auto;
@@ -19,28 +27,32 @@
 .header-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center header content horizontally */
+  align-items: left;
+  /* Center header content horizontally */
+  background-color: #171717;
   color: #fff;
   justify-content: space-between;
   z-index: 1000%;
-  width:100%;
+  width: 100%;
   max-width: 1767px;
   position: sticky;
+  top: 0;
 }
 
 .nav-menu {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  padding: 2%;
   font-family: JejuMyeongjo, sans-serif;
-  font-size: 18px ;
+  font-size: 18px;
 }
 
-a{
+a {
   text-decoration: none;
-  color:#fff;
+  color: #fff;
 }
 
-a:hover{
+a:hover {
   color: beige;
 }
 
@@ -68,31 +80,38 @@ a:hover{
 
 .profile-image {
   aspect-ratio: 1;
-  object-fit: cover; /* Ensure the image covers the container */
-  width: 150px; /* Default width for larger screens */
+  object-fit: cover;
+  /* Ensure the image covers the container */
+  width: 150px;
+  /* Default width for larger screens */
   border-radius: 50%;
   max-width: 100%;
-  margin: 20px auto; /* Center image horizontally */
+  margin: 20px auto;
+  /* Center image horizontally */
 }
 
 /* Responsive Styles for Profile Image */
 @media (max-width: 991px) {
   .profile-image {
-    width: 120px; /* Adjust width for smaller screens */
-    margin: 20px auto; /* Center image horizontally */
+    width: 120px;
+    /* Adjust width for smaller screens */
+    margin: 20px auto;
+    /* Center image horizontally */
   }
 }
 
 @media (max-width: 576px) {
   .profile-image {
-    width: 100px; /* Adjust width for very small screens */
-    margin: 15px auto; /* Center image horizontally */
+    width: 100px;
+    /* Adjust width for very small screens */
+    margin: 15px auto;
+    /* Center image horizontally */
   }
 }
 
 .greeting {
   margin-top: 25px;
-  font: 700 40px Istok Web, sans-serif;
+  font: 700 40px Istok-Web, sans-serif;
   text-align: center;
   color: #fff;
 }
@@ -114,6 +133,8 @@ a:hover{
 .social-links {
   width: 250px;
   max-width: 100%;
+  display: flex;
+  align-items: wrap;
   margin: 80px 0 0 10px;
 }
 
@@ -152,7 +173,7 @@ a:hover{
 .section-title {
   color: #fff;
   margin: 100px 0 0 35px;
-  font: 700 32px Istok Web, sans-serif;
+  font: 700 32px Istok-Web, sans-serif;
 }
 
 .skills-section {
@@ -173,7 +194,7 @@ a:hover{
 .technologies-title {
   color: #fff;
   margin: 70px 0 0 21px;
-  font: 700 32px Istok Web, sans-serif;
+  font: 700 32px Istok-Web, sans-serif;
 }
 
 .tech-icons {
@@ -198,7 +219,7 @@ a:hover{
 .projects-title {
   color: #fff;
   margin: 150px 0 0 31px;
-  font: 700 32px Istok Web, sans-serif;
+  font: 700 32px Istok-Web, sans-serif;
 }
 
 .project-container {
@@ -206,8 +227,10 @@ a:hover{
 }
 
 .project-content {
-  gap: 20px;
+  /* gap: 20px; */
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-image-wrapper {
@@ -215,7 +238,8 @@ a:hover{
   flex-direction: column;
   line-height: normal;
   width: 28%;
-  margin-left: 70px;
+  /* margin-left: 70px; */
+  padding-left: 15%
 }
 
 .project-image {
@@ -231,12 +255,13 @@ a:hover{
   flex-direction: column;
   line-height: normal;
   width: 72%;
-  margin-left: 0px;
+  /* margin-right: 70px; */
+  padding-right: 10%
 }
 
 .project-description {
   color: #fff;
-  align-self: stretch;
+  /* align-self: stretch; */
   margin: auto;
   font: 20px JejuMyeongjo, sans-serif;
 }
@@ -259,22 +284,28 @@ a:hover{
 
   .nav-menu {
     white-space: initial;
+    padding: 5%;
+    background-color: #171717;
   }
 
   .profile-image {
-    width: 120px; /* Adjust width for smaller screens */
-    margin: 20px auto; /* Center image horizontally */
+    width: 120px;
+    /* Adjust width for smaller screens */
+    margin: 20px auto;
+    /* Center image horizontally */
   }
 
   .greeting {
     max-width: 100%;
     margin-top: 40px;
-    font-size: 30px; /* Adjust font-size for smaller screens */
+    font-size: 30px;
+    /* Adjust font-size for smaller screens */
   }
 
   .about-section {
     max-width: 100%;
     padding-left: 20px;
+    font-size: 12px;
   }
 
   .bio {
@@ -286,8 +317,7 @@ a:hover{
   }
 
   .social-icons {
-    flex-direction: column;
-    align-items: stretch;
+    margin: 0px auto;
     gap: 0;
   }
 
@@ -311,17 +341,20 @@ a:hover{
 
   .skills-description {
     max-width: 100%;
+    font-size: 16px;
   }
 
   .technologies-title {
     max-width: 100%;
     margin-top: 40px;
-    font-size: 30px; /* Adjust font-size for smaller screens */
+    font-size: 30px;
+    /* Adjust font-size for smaller screens */
   }
 
   .tech-icons {
     flex-wrap: wrap;
     margin-top: 40px;
+    width: 70%;
   }
 
   .projects-title {
@@ -330,6 +363,9 @@ a:hover{
 
   .project-container {
     max-width: 100%;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
   }
 
   .project-content {
@@ -339,7 +375,8 @@ a:hover{
   }
 
   .project-image-wrapper {
-    width: 100%;
+    width: 50%;
+    margin: 0px auto;
   }
 
   .project-image {
